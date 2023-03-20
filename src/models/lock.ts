@@ -24,4 +24,6 @@ export interface Lock {
      * Gets or sets the battery level of the lock.
      */
     electricQuantity: string;
+
+    hasGateway: boolean;
 }

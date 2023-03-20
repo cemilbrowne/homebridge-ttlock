@@ -33,8 +33,4 @@ export interface LockList {
      */
     hasGateway: string;
 
-    /**
-     * Gets or sets the array for LockVersion details.
-     */
-    lockVersion: Array<LockVersion>;
 }
