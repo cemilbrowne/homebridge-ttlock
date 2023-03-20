@@ -1,10 +1,8 @@
-import { Service, PlatformAccessory, CharacteristicValue } from 'homebridge';
+import { Service, PlatformAccessory } from 'homebridge';
 import { TtlockPlatform } from './platform';
-import { LockResponse, TTLOCK_STATES } from './models/lock-response';
-import { Lock } from './models/lock';
+
 import { TtlockApiClient } from './api';
-import axios from 'axios';
-import qs from 'qs';
+
 
 enum LockState {
   Locked = 0,

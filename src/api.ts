@@ -32,7 +32,8 @@ export class TtlockApiClient {
     await this.getAccessTokenAsync();
     const now = new Date().getTime();
 
-    this.platform.log.debug('Querying, clientid: '+this.platform.config.clientid+' accesstoken: '+this.accessToken+' lockid: '+lockId+' date: '+now);
+    this.platform.log.debug('Querying, clientid: '+this.platform.config.clientid +
+      ' accesstoken: '+this.accessToken+' lockid: '+lockId+' date: '+now);
 
     const response = await axios.post<LockResponse>('https://euapi.ttlock.com/v3/lock/queryOpenState', qs.stringify({
       clientId: this.platform.config.clientid,
@@ -61,7 +62,8 @@ export class TtlockApiClient {
     await this.getAccessTokenAsync();
     const now = new Date().getTime();
 
-    this.platform.log.debug('locking, clientid: '+this.platform.config.clientid+' accesstoken: '+this.accessToken+' lockid: '+lockId+' date: '+now);
+    this.platform.log.debug('locking, clientid: '+this.platform.config.clientid +
+      ' accesstoken: '+this.accessToken+' lockid: '+lockId+' date: '+now);
 
     const response = await axios.post<LockResponse>('https://euapi.ttlock.com/v3/lock/lock', qs.stringify({
       clientId: this.platform.config.clientid,
@@ -90,7 +92,8 @@ export class TtlockApiClient {
     await this.getAccessTokenAsync();
     const now = new Date().getTime();
 
-    this.platform.log.debug('unlocking, clientid: '+this.platform.config.clientid+' accesstoken: '+this.accessToken+' lockid: '+lockId+' date: '+now);
+    this.platform.log.debug('unlocking, clientid: '+this.platform.config.clientid +
+      ' accesstoken: '+this.accessToken+' lockid: '+lockId+' date: '+now);
 
     const response = await axios.post<LockResponse>('https://euapi.ttlock.com/v3/lock/unlock', qs.stringify({
       clientId: this.platform.config.clientid,

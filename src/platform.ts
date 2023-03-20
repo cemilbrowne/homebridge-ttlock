@@ -3,9 +3,7 @@ import { PLATFORM_NAME, PLUGIN_NAME } from './settings';
 import { TtlockPlatformAccessory } from './platformAccessory';
 
 import { TtlockApiClient } from './api';
-import axios from 'axios';
-import qs from 'qs';
-import { LocksResponse } from './models/locks-response';
+
 
 /**
  * HomebridgePlatform
